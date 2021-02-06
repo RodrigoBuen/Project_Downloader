@@ -109,6 +109,7 @@ venv/*
 ENV/
 env.bak/
 venv.bak/
+.google-cookie
 
 # Spyder project settings
 .spyderproject
@@ -126,3 +127,5 @@ venv.bak/
 dmypy.json
 
 */teste.html
+__pycache__/*
+.idea/*

@@ -1,27 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Viken Music</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-<div id="container">
-    <img  src="{{ url_for('static', filename='image/bg.jpg') }}" class="bg">
-    <div class="BackgroundDiv">
-        <div id="title">
-            <h3>Viken Music Download</h3>
-        </div>
+{% extends "base.html" %}
 
-        <div class="search">
-            <input type="text" id="busca" name="input">
-            <button type="submit" id="button" name="button">Search</button>
+{% block title %}
+Download Viken
+{% endblock title %}
+
+{% block body %}
+<div class="options">
+    <div class="section">
+        <h2>Musicas</h2>
+        <div class="group1">
+            <a href="musica-nome" class="link">Baixar por nome da musica</a>
+        </div>
+        <div class="group1">
+            <a href="musica-link" class="link">Baixar por link (youtube)</a>
         </div>
     </div>
-    <div class="result">
-
+     <div class="section2">
+        <h2>Videos</h2>
+        <div class="group1">
+            <a href="#" class="link">Baixar por link (youtube)</a>
+        </div>
     </div>
+
 </div>
-
-</body>
-</html>
+{% endblock body %}

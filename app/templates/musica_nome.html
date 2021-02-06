@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title  %}
+Download Viken Musicas
+{% endblock title %}
+
+{% block body %}
+<div class="group1" >
+    <div class="bordas">
+        <a href="/"><i class="fas fa-chevron-circle-left"></i></a>
+        <form method="post" id="form">
+            <div class="entry">
+                <input type="text" placeholder="Pequise sua musica" name="texto">
+                <button id="btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+        
+    </div>
+    <img src="{{ url_for('static', filename='image/vk.png') }}">
+</div>
+
+{% endblock body %}

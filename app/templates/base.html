@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+
+        {% endblock title %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome-free/css/all.min.css') }}"
+</head>
+<body class="body">
+<div id="container">
+    <div id="title">
+        <div id="logo">
+            <img src="{{ url_for('static', filename='image/Global viken white.png') }}">
+        </div>
+        <h3>Download Viken</h3>
+    </div>
+
+    {% block body %}
+
+    {% endblock body %}
+</div>
+</body>
+</html>
