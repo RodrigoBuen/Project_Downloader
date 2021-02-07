@@ -110,7 +110,7 @@
 .entry{
     background-color: #64b9eb;
     border-radius: 30px;
-    width: 764px;
+    width: 875px;
     height: 48px;
     margin-top: 190px;
     display: flex;
@@ -120,18 +120,18 @@
 
 .entry > input{
     background-color: #ffffff;
-    width: 84%;
+    width: 86%;
     height: 75%;
     border-radius: 30px;
     border: none;
     outline: none;
     margin-left: 5px;
     font-size: 20px;
-    padding-left: 15px;
+    padding-left: 26px;
 }
 #btn{
     width: 39px;
-    margin-left: 31px;
+    margin-left: 22px;
     display: flex;
     align-items: center;
     justify-content: center;

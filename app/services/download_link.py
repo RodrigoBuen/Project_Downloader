@@ -1,22 +1,13 @@
-from googlesearch import search
 import youtube_dl
 
 campo_entry = ''
 
-class Download():
+class Download_link():
     def __init__(self):
-        self.pesquisa()
         self.run()
 
-    def pesquisa(self):
-        self.links = []
-        for self.musica in search(campo_entry +' lyrics youtube', stop=1):
-            if 'https://www.youtube.com/watch' in self.musica:
-                self.links.append(self.musica)
-                print(self.musica)
-
     def run(self):
-        self.video_url = self.links[0]
+        self.video_url = campo_entry
         self.video_info = youtube_dl.YoutubeDL().extract_info(
             url=self.video_url, download=False)
 

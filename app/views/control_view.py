@@ -1,6 +1,7 @@
 from flask import render_template, request, redirect, url_for
 from app import app
-from app.services import musica_nome
+from app.services import download_nome
+from app.services import download_link
 
 @app.route("/")
 def home():
@@ -10,12 +11,18 @@ def home():
 def musica_nome():
     if request.method == 'POST':
         texto = request.form['texto']
-        musica_nome.campo_entry = texto
-        musica_nome.Download()
+        download_nome.campo_entry = texto
+        download_nome.Download_nome()
         
         return redirect(url_for('home'))
-    return render_template("musica_nome.html")
+    return render_template('musica_nome.html')
 
-@app.route("/musica-link")
+@app.route("/musica-link", methods=['GET','POST'])
 def musica_link():
-    return render_template("musica_link.html")
+    if request.method == 'POST':
+        texto = request.form['texto']
+        download_link.campo_entry = texto
+        download_link.Download_link()
+
+        return redirect(url_for('home'))
+    return render_template('musica_link.html')
