@@ -2,6 +2,7 @@ from flask import render_template, request, redirect, url_for
 from app import app
 from app.services import download_nome
 from app.services import download_link
+from app.services import download_video
 
 @app.route("/")
 def home():
@@ -26,3 +27,13 @@ def musica_link():
 
         return redirect(url_for('home'))
     return render_template('musica_link.html')
+
+@app.route("/video-link", methods=['GET','POST'])
+def video_link():
+    if request.method == 'POST':
+        texto = request.form['texto']
+        download_video.url = texto
+        download_video.Download_Video()
+
+        return redirect(url_for('home'))
+    return render_template('video_download.html')

@@ -1,0 +1,1 @@
+Computador_nome = 'rbart'
