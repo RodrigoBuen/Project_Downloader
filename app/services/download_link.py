@@ -2,6 +2,7 @@ import youtube_dl
 import os
 import shutil
 import prefs
+from time import sleep
 
 campo_entry = ''
 path = 'C:' + os.sep + 'Users' + os.sep + f'{prefs.Computador_nome}' + os.sep + 'Downloads'
@@ -10,6 +11,7 @@ path2 = 'C:'+os.sep+'Users'+os.sep+f'{prefs.Computador_nome}'+os.sep+'OneDrive'+
 class Download_link():
     def __init__(self):
         self.run()
+        sleep(2)
         self.move()
 
     def run(self):

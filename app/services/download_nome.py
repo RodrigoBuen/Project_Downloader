@@ -3,6 +3,7 @@ import youtube_dl
 import os
 import shutil
 import prefs
+from time import sleep
 
 campo_entry = ''
 path = 'C:' + os.sep + 'Users' + os.sep + f'{prefs.Computador_nome}' + os.sep + 'Downloads'
@@ -12,6 +13,7 @@ class Download_nome():
     def __init__(self):
         self.pesquisa()
         self.run()
+        sleep(2)
         self.move()
 
     def pesquisa(self):

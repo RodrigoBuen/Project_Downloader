@@ -1,5 +1,4 @@
 from pytube import YouTube, Playlist
-from tkinter.filedialog import asksaveasfile
 import os
 import prefs
 
@@ -12,31 +11,41 @@ class Download_Video():
 
     def download_video(self):
         yt = YouTube(url)
-        try:
-            video = yt.streams.filter(file_extension='mp4', resolution='720p', video_codec="avc1.64001F", audio_codec="mp4a.40.2").first()
+        if yt.streams.filter(resolution='720p', progressive='True'):
+            video = yt.streams.first()
+            print(video)
             video.download(path)
-            print('Download Completo')
-        except:
-            video = yt.streams.filter(file_extension='mp4', resolution='480p', video_codec="avc1.64001F", audio_codec="mp4a.40.2").first()
+        elif yt.streams.filter(resolution='480p', progressive='True'):
+            video = yt.streams.first()
+            print(video)
             video.download(path)
-            print('Download Completo')
+        elif yt.streams.filter(resolution='360p', progressive='True'):
+            video = yt.streams.first()
+            print(video)
+            video.download(path)
 
     def download_playlist(self):
         playlist = Playlist(url)
         for item in playlist:
             yt = YouTube(item)
-            try:
-                video = yt.streams.filter(file_extension='mp4', resolution='720p', video_codec="avc1.64001F", audio_codec="mp4a.40.2").first()
+            if yt.streams.filter(resolution='720p', progressive='True'):
+                video = yt.streams.first()
+                print(video)
                 video.download(path, output_path='playlist')
-                print('Download Completo')
-            except:
-                video = yt.streams.filter(file_extension='mp4', resolution='480p', video_codec="avc1.64001F", audio_codec="mp4a.40.2").first()
+            elif yt.streams.filter(resolution='480p', progressive='True'):
+                video = yt.streams.first()
+                print(video)
                 video.download(path, output_path='playlist')
-                print('Download Completo')
+            elif yt.streams.filter(resolution='360p', progressive='True'):
+                video = yt.streams.first()
+                print(video)
+                video.download(path, output_path='playlist')
 
     def tratativa(self):
         if 'https://www.youtube.com/watch' in url:
             self.download_video()
+            print('Download Completo')
 
         elif 'https://www.youtube.com/playlist' in url:
             self.download_playlist()
+            print('Download Completo')
