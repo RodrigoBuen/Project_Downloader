@@ -1,8 +1,9 @@
 from pytube import YouTube, Playlist
+from tkinter.filedialog import asksaveasfile
 import os
 import prefs
 
-url = input('url: ')
+url = ''
 path = 'C:' + os.sep + 'Users' + os.sep + f'{prefs.Computador_nome}' + os.sep + 'Downloads'
 
 class Download_Video():
@@ -12,11 +13,11 @@ class Download_Video():
     def download_video(self):
         yt = YouTube(url)
         try:
-            video = yt.streams.filter(file_extension='mp4', resolution='720p', fps='60').first()
+            video = yt.streams.filter(file_extension='mp4', resolution='720p', video_codec="avc1.64001F", audio_codec="mp4a.40.2").first()
             video.download(path)
             print('Download Completo')
         except:
-            video = yt.streams.filter(file_extension='mp4', resolution='480p', fps='60').first()
+            video = yt.streams.filter(file_extension='mp4', resolution='480p', video_codec="avc1.64001F", audio_codec="mp4a.40.2").first()
             video.download(path)
             print('Download Completo')
 
@@ -25,11 +26,11 @@ class Download_Video():
         for item in playlist:
             yt = YouTube(item)
             try:
-                video = yt.streams.filter(file_extension='mp4', resolution='720p', fps='60').first()
+                video = yt.streams.filter(file_extension='mp4', resolution='720p', video_codec="avc1.64001F", audio_codec="mp4a.40.2").first()
                 video.download(path, output_path='playlist')
                 print('Download Completo')
             except:
-                video = yt.streams.filter(file_extension='mp4', resolution='480p', fps='60').first()
+                video = yt.streams.filter(file_extension='mp4', resolution='480p', video_codec="avc1.64001F", audio_codec="mp4a.40.2").first()
                 video.download(path, output_path='playlist')
                 print('Download Completo')
 
@@ -39,5 +40,3 @@ class Download_Video():
 
         elif 'https://www.youtube.com/playlist' in url:
             self.download_playlist()
-
-Download_Video()
