@@ -1,20 +1,14 @@
 from googlesearch import search
 import youtube_dl
-import os
-import shutil
-import prefs
 from time import sleep
 
 campo_entry = ''
-path = 'C:' + os.sep + 'Users' + os.sep + f'{prefs.Computador_nome}' + os.sep + 'Downloads'
-path2 = 'C:'+os.sep+'Users'+os.sep+f'{prefs.Computador_nome}'+os.sep+'OneDrive'+os.sep+'Área de Trabalho'+os.sep+'Music_Download'
 
 class Download_nome():
     def __init__(self):
         self.pesquisa()
         self.run()
-        sleep(2)
-        self.move()
+        sleep(1)
 
     def pesquisa(self):
         self.links = []
@@ -45,7 +39,3 @@ class Download_nome():
 
         except:
             print('Baixada com sucesso')
-
-    def move(self):
-        os.chdir(path2)
-        shutil.move(f'{self.filename}', path + os.sep + f'{self.filename}')
