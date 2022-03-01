@@ -7,7 +7,7 @@
     width: 100%;
     height: 100%;
     background-color: #202232;
-    min-height: 600px;
+    min-height: 518px;
 }
 
 #title {
@@ -16,7 +16,7 @@
     font-size: 22px;
     letter-spacing: 3px;
     height: 100%;
-    background-color: #346F9E;
+    background-color: #2d628d;
     max-height: 85px;
 }
 #title > h1{
@@ -26,22 +26,30 @@
     text-shadow: 1px 2px 3px #1c1c1c;
 }
 
+#form {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
+}
+
 footer {
     color: #fff;
     justify-content: center;
     display: flex;
-    background-color: #346F9E;
+    background-color: #2d628d;
+    font-size: 17px;
 }
 
 footer a {
     text-decoration: none;
     color: #eef14d;
-    transition: 0.5s;
+    transition: 0.1s;
 }
 
 footer a:hover {
     font-weight: bolder;
-    font-size: 18px;
+    text-decoration: underline;
 }
 
 .options{
@@ -51,9 +59,8 @@ footer a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2%;
     margin-bottom: 7%;
-
+    padding: 30px;
 }
 
 .link{
@@ -66,9 +73,9 @@ footer a:hover {
     color: white;
     font-size: 20px;
     font-weight: bolder;
-    box-shadow: 0px 0px 3px #eef14d;
+    box-shadow: 0px 0px 4px #eef14d;
     text-align: center;
-    padding: 20px;
+    padding: 23px;
 }
 .link:hover{
     background-color: #eef14d;
@@ -80,12 +87,12 @@ footer a:hover {
     background-color: #2022323d;
     border-radius: 5px;
     width: 45%;
-    height: 70%;
+    height: 65%;
     display: flex;
     flex-direction: column;
     align-items: center;
     left: 3%;
-    margin-top: 67px;
+    margin-top: 50px;
     border-color: #66bbed;
     box-shadow: 0px 0px 2px #346f9e;
     border: 1px solid #5c5c5c;
@@ -94,7 +101,6 @@ footer a:hover {
 .section > h2{
     font-size: 30px;
     color: #eef14d;
-    margin-top: -10%;
     text-shadow: 1px 2px 3px #1c1c1c;
 }
 .section2{
@@ -102,12 +108,12 @@ footer a:hover {
     background-color: #2022323d;
     border-radius: 5px;
     width: 45%;
-    height: 70%;
+    height: 65%;
     display: flex;
     flex-direction: column;
     align-items: center;
     left: 51%;
-    margin-top: 67px;
+    margin-top: 50px;
     box-shadow: 0px 0px 2px #346f9e;
     border: 1px solid #5c5c5c;
 
@@ -116,36 +122,36 @@ footer a:hover {
 .section2 > h2{
     font-size: 30px;
     color: #eef14d;
-    margin-top: -10%;
     text-shadow: 1px 2px 3px #1c1c1c;
 }
 
 #logo{
     display: flex;
     align-items: center;
+    padding: 20px;
 }
 
 .entry{
-    background-color: #64b9eb;
-    border-radius: 30px;
+    background-color: #2d628d;
+    border-radius: 5px;
     width: 875px;
     height: 48px;
-    margin-top: 190px;
     display: flex;
     align-items: center;
-    box-shadow: 0px 2px 2px cadetblue;
+    justify-content: flex-start;
+    margin: 30px;
 }
 
 .entry > input{
     background-color: #ffffff;
-    width: 86%;
+    width: 88%;
     height: 75%;
-    border-radius: 30px;
+    border-radius: 5px;
     border: none;
     outline: none;
-    margin-left: 5px;
     font-size: 20px;
-    padding-left: 26px;
+    margin: 6px;
+    padding-left: 12px;
 }
 #btn{
     width: 39px;
@@ -153,7 +159,7 @@ footer a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #64b9eb;
+    background-color: #2d628d;
     border: none;
     outline: none;
 }
@@ -162,30 +168,26 @@ footer a:hover {
     color: white;
 }
 #btn > i:hover{
-    color: #eaeaea;
+    color: #eef14d;
     cursor: pointer;
-    text-shadow: 2px 2px 2px cadetblue;
+    text-shadow: 1px 1px 2px #202232;
 }
 .bordas{
-    position: absolute;
-    background-color: #96cce7;
+    padding: 20px;
     width: 100%;
-    height: 88%;
-    top: 101px;
+    height: 100%;
+    min-height: 387px;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .bordas > a{
-    position: absolute;
-    left: 7px;
-    top: 2px;
-    font-size: 40px;
+    font-size: 42px;
     text-decoration: none;
-    color: white;
+    color: #2d628d;
 }
 .bordas > a:hover{
-    color: rgb(231, 231, 231);
+    color: #eef14d;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px #202232;
 }
 .group1 > img{
     position: absolute;
