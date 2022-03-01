@@ -11,17 +11,19 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome-free/css/all.min.css') }}"
 </head>
 <body class="body">
-<div id="container">
     <div id="title">
         <div id="logo">
-            <img src="{{ url_for('static', filename='image/logo_project.png') }}">
+            <img src="{{ url_for('static', filename='image/logo_project.png') }}" style="height: 70px;">
         </div>
-        <h3>Project_Downloader</h3>
+        <h1>Project_Downloader</h1>
     </div>
+    <div id="container">
+        {% block body %}
 
-    {% block body %}
-
-    {% endblock body %}
-</div>
+        {% endblock body %}
+    </div>
+    <footer>
+         <p>Desenvolvido por <a href="https://github.com/RodrigoBuen" target="_blank">Rodrigo</a></p>
+    </footer>
 </body>
 </html>
